@@ -15,6 +15,7 @@ lambda 函数的语法只包含一个语句，如下：
 
 lambda [arg1 [,arg2,.....argn]]:expression
 '''
+import  sys
 sum = lambda  arg1,arg2:arg1+arg2
 #调用sum函数
 print("相加后的值为：",sum(10,20))
@@ -61,3 +62,9 @@ def outer():
     inner()
     print(num)
 outer()
+
+print(sys.path)
+
+import user_name
+
+
