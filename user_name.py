@@ -1,8 +1,13 @@
 # ! /usr/bin/python3
 # filename: using_name.py
 
-if __name__ == '__main__':
-    print("程序自身在运行")
-else:
-    print("我来自另一模块")
-print("王超")
+import mysql.connector
+
+mydb = mysql.connector.connect(
+    host="192.168.162.130",#数据库主机地址
+    user="robot",#数据库用户名
+    passwd="root123456" #数据库密码
+)
+
+mycursor = mydb.cursor()
+mycursor.execute("drop database test1")
